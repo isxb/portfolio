@@ -566,7 +566,6 @@ section.portfolio .flex {
     color: white;
     opacity: 0;
     transition: 1s;
-
 }
 
 .img-port:hover .overlay {
@@ -623,7 +622,7 @@ section.portfolio .flex {
     width: 60px;
     height: 30px;
     margin-right: 15px;
-    background-color: #4d4d4d;
+    background-color: #94a090;
     border-radius: 30px;
     position: relative;
     cursor: pointer;
@@ -650,19 +649,19 @@ section.portfolio .flex {
 }
 
 body.dark{
-    background-color: #000;
+    background-color: #25231f;
 }
 
 body.dark .txt-topo-site span::before{
-    color: rgb(151, 149, 149);
+    color: rgb(112, 101, 101);
 }
 
 body.dark .txt-topo-site span::after{
-    background-color: #000;
+    background-color: #25231f;
 }
 
 body.dark .txt-especialidades span::after{
-    background-color: black;
+    background-color: #25231f;
 }
 
 body.dark .txt-topo-site{
@@ -674,12 +673,9 @@ body.dark .txt-sobre{
 }
 
 body.dark header>.interface{
-    background-color: rgb(95, 95, 95);
+    background-color: #5f5a50;
 }
 
-dark.body .footer{
-    background-color: white;
-}
 
 /* CORREÇÃO TEXTOS COM DIGITAÇÃO */
 
@@ -688,12 +684,18 @@ dark.body .footer{
     .txt-topo-site {
         font-size: 35px;
     }
+    .overlay {
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 1125px) {
 
     .txt-topo-site {
         font-size: 25px;
+    }
+    .overlay {
+        opacity: 1;
     }
 }
 
@@ -707,6 +709,9 @@ dark.body .footer{
         width: 180px;
     }
 
+    .overlay {
+        opacity: 1;
+    }
 
     .menu-desktop,
     .contato-botao {
@@ -747,6 +752,10 @@ dark.body .footer{
         display: block;
     }
 
+    .overlay {
+        opacity: 1;
+    }
+
     section.topo-do-site {
         padding: 100px 4%;
     }
@@ -766,6 +775,12 @@ dark.body .footer{
     .txt-especialidades {
         font-size: 30px;
 
+    }
+
+
+    .trilho .indicador{
+        float: none;
+        margin-left: 100px;
     }
 
     .sobre-titulo {
