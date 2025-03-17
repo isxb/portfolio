@@ -9,6 +9,7 @@
 body {
     background-color: #F6E6CB;
     height: 100vh;
+    transition: 1s;
 }
 
 .logo img {
@@ -140,6 +141,7 @@ section.topo-do-site .botao-responsivo {
     content: "";
     color: #A0937D;
     animation: palavras-escritas 30s infinite;
+    transition: 1s;
 
 }
 
@@ -152,6 +154,7 @@ section.topo-do-site .botao-responsivo {
     animation: cursor 0.8s infinite, animacao 30s steps(30) infinite;
     width: calc(100% + 13px);
     background-color: #F6E6CB;
+    transition: 1s;
 }
 
 section.sobre .sobre-titulo {
@@ -341,6 +344,7 @@ section.sobre .flex {
     content: "";
     color: #B6C7AA;
     animation: palavra-escrita-especialidades 20s infinite;
+    transition: 1s;
 
 }
 
@@ -353,6 +357,7 @@ section.sobre .flex {
     animation: cursor-especialidades 0.8s infinite, animacao-especialidades 20s steps(20) infinite;
     width: calc(100% + 13px);
     background-color: #F6E6CB;
+    transition: 1s;
 }
 
 /* ESPECIALIDADES ESTILO */
@@ -614,6 +619,68 @@ section.portfolio .flex {
     cursor: pointer;
 }
 
+.trilho {
+    width: 60px;
+    height: 30px;
+    margin-right: 15px;
+    background-color: #4d4d4d;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.trilho .indicador {
+    width: 30px;
+    height: 30px;
+    background-color: #000000;
+    border-radius: 30px;
+    transform: scale(.9);
+    position: absolute;
+    left: 0;
+    transition: 1s;
+}
+
+.trilho.dark{
+    background-color: #b3b4b2;
+}
+
+.trilho.dark .indicador {
+    left: 30px;
+    background-color: white;
+}
+
+body.dark{
+    background-color: #000;
+}
+
+body.dark .txt-topo-site span::before{
+    color: rgb(151, 149, 149);
+}
+
+body.dark .txt-topo-site span::after{
+    background-color: #000;
+}
+
+body.dark .txt-especialidades span::after{
+    background-color: black;
+}
+
+body.dark .txt-topo-site{
+    color: white;
+}
+
+body.dark .txt-sobre{
+    color: white;
+}
+
+body.dark header>.interface{
+    background-color: rgb(95, 95, 95);
+}
+
+dark.body .footer{
+    background-color: white;
+}
+
 /* CORREÇÃO TEXTOS COM DIGITAÇÃO */
 
 @media screen and (max-width: 1271px) {
@@ -724,7 +791,7 @@ section.portfolio .flex {
         margin-left: 105px;
     }
 
-    section.portfolio .img-port{
+    section.portfolio .img-port {
         margin-top: 60px;
         margin-left: 10px;
     }
