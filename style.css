@@ -777,12 +777,6 @@ body.dark header>.interface{
 
     }
 
-
-    .trilho .indicador{
-        float: none;
-        margin-left: 100px;
-    }
-
     .sobre-titulo {
         font-size: 30px;
         background: linear-gradient(to right, #a4b399 50%, #000);
