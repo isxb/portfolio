@@ -618,6 +618,10 @@ section.portfolio .flex {
     cursor: pointer;
 }
 
+.tec-usadas{
+    width: 15px;
+}
+
 .trilho {
     width: 60px;
     height: 30px;
