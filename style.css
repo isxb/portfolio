@@ -23,6 +23,17 @@ body {
 
 .flex {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 10px;
+    }
+
+.flex-sobre {
+    display: flex;
+}
+
+.flex-topo{
+    display: flex;
 }
 
 /* ESTILO CABEÇALHO */
@@ -253,7 +264,7 @@ section.sobre {
 
 .sobre .img-sobre img {
     border-radius: 30px;
-
+    flex-wrap: nowrap;
 }
 
 section.sobre .flex {
@@ -269,6 +280,7 @@ section.sobre .flex {
     font-size: 35px;
     line-height: 40px;
     margin-bottom: 40px;
+    margin-left: 30px;
 }
 
 .sobre .txt-sobre h2 span {
@@ -377,8 +389,6 @@ section.especialidades {
     width: 200px;
     height: 200px;
     display: flex;
-    text-align: center;
-    justify-content: space-around;
     flex-direction: column;
     border-radius: 30px;
     margin: 0 50px;
@@ -386,8 +396,17 @@ section.especialidades {
 
 }
 
-.especialidades .espec:hover {
-    transform: scale(1.16);
+@keyframes balancar {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+}
+
+
+.especialidades .espec{
+    animation: balancar 2s ease-in-out infinite;
 
 }
 
@@ -395,6 +414,7 @@ section.especialidades {
     width: 130px;
     color: #FF8F00;
     border-radius: 30px;
+    
 
 }
 
@@ -498,15 +518,26 @@ section.especialidades {
 }
 
 
-
-
 /* PROJETOS STYLE */
+
+.portfolio {
+    justify-content: center;
+    flex-direction: column; 
+    text-align: center;
+    }
+
+    .sobre .img-sobre{
+        justify-content: center;
+        flex-direction: column; 
+        text-align: center;
+    }
 
 section.portfolio .interface {
     text-align: center;
     color: black;
 
 }
+
 
 section.portfolio .interface h4 {
     font-size: 35px;
@@ -529,7 +560,7 @@ section.portfolio .flex {
     justify-content: space-around;
 }
 
-/* Estilos para as imagens do portfólio */
+/* ESTILO PARA IMAGENS DO PORTFOLIO */
 .img-port {
     width: 360px;
     height: 460px;
@@ -544,11 +575,21 @@ section.portfolio .flex {
 
 }
 
-.img-port:hover {
-    background-position: 100% 100%;
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
 }
 
-/* Estilos para o overlay */
+.img-port{
+    animation: moveBackground 4s linear infinite alternate;
+
+}
+
+/* ESTILOS PARA OVERLAY */
 .overlay {
     position: absolute;
     top: 0;
@@ -630,6 +671,8 @@ section.portfolio .flex {
     border-radius: 30px;
     position: relative;
     cursor: pointer;
+    position: relative;
+    margin-left: auto;
 }
 
 .trilho .indicador {
@@ -683,7 +726,7 @@ body.dark header>.interface{
 
 /* CORREÇÃO TEXTOS COM DIGITAÇÃO */
 
-@media screen and (max-width: 1271px) {
+@media screen and (max-width: 1275px) {
 
     .txt-topo-site {
         font-size: 35px;
@@ -692,6 +735,35 @@ body.dark header>.interface{
         opacity: 1;
     }
 }
+
+@media (max-width: 1270) { /* Ajuste para telas menores */
+    .flex {
+     display: none;
+    }
+
+    .espec {
+        margin: 10px 0; /* Adiciona espaçamento entre as divs */
+    }
+}
+
+@media screen and (max-width: 1215px) {
+
+    /* CABEÇALHO */
+    .overlay {
+        opacity: 1;
+    }
+
+    .menu-desktop,
+    .contato-botao {
+        display: none;
+    }
+
+    .botao-abrir-menu {
+        display: block;
+    }
+
+}
+
 
 @media screen and (max-width: 1125px) {
 
@@ -752,6 +824,10 @@ body.dark header>.interface{
         flex-direction: column;
     }
 
+    .flex-sobre {
+        flex-direction: column;
+    }
+
     section.topo-do-site .botao-responsivo {
         display: block;
     }
@@ -786,6 +862,7 @@ body.dark header>.interface{
         background: linear-gradient(to right, #a4b399 50%, #000);
         -webkit-background-clip: text;
         color: transparent;
+        text-align: center;
     }
 
     section.sobre .img-sobre img {
@@ -807,6 +884,28 @@ body.dark header>.interface{
     section.portfolio .img-port {
         margin-top: 60px;
         margin-left: 10px;
+    }
+
+    .portfolio .flex {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .portfolio .img-port {
+        margin: 5px 0; 
+    }
+
+    .sobre .img-sobre{
+        flex-direction: column; 
+        align-items: center; /
+    }
+
+    .flex-sobre{
+        flex-wrap: wrap;
+    }
+    
+    .flex-topo{
+        flex-wrap: wrap;
     }
 
 }
